@@ -44,9 +44,11 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
+Bundle 'tpope/vim-rails'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'jlanzarotta/bufexplorer'
+Bundle 'scrooloose/syntastic'
+Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
 
 
@@ -70,7 +72,10 @@ let g:mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
-map <C-e> :NERDTreeToggle<CR>
+map <C-e> :NERDTreeToggle<cr>
+nmap <leader>e :NERDTreeFind<cr>
+nmap <leader>p :CtrlP<cr>
+nmap <leader>b :CtrlPBuffer<cr>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
